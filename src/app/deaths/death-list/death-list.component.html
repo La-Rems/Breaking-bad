@@ -1,0 +1,33 @@
+<div class="title">
+  <h1>List of Deaths</h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered table-hover bg-white">
+        <thead class="thead-dark">
+        <tr>
+          <th scope="col">Season - Episode</th>
+          <th scope="col">Character</th>
+          <th scope="col">Cause</th>
+          <th scope="col">Responsible</th>
+          <th scope="col">Last words</th>
+          <th scope="col">Number of deaths</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let death of deathsList">
+          <td>Season {{death.season}} - Episode {{death.episode}}</td>
+          <td>{{death.death}}</td>
+          <td>{{death.cause}}</td>
+          <td>{{death.responsible}}</td>
+          <td>{{death.last_words}}</td>
+          <td>{{death.number_of_deaths}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

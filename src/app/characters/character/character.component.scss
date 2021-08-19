@@ -1,0 +1,29 @@
+.container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+.bg-bb {
+  background-color: #0d5032;
+  padding: 20px;
+}
+
+.bg-both {
+  background: linear-gradient(to left bottom, #0d5032 50%, #c9a228 50%);
+  color: white;
+}
+
+.bg-bcs {
+  background-color: #c9a228;
+  padding: 20px;
+}

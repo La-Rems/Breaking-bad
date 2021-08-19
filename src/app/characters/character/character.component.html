@@ -1,0 +1,27 @@
+<div class="title">
+  <h1>Details of {{character.name}}</h1>
+</div>
+
+<div class="container">
+  <div [class.bg-bb]="character.category == 'Breaking Bad' "
+       [class.bg-bcs]="character.category == 'Better Call Saul' "
+       [class.bg-both]="character.category == 'Breaking Bad, Better Call Saul' " *ngIf="character != null">
+    <div class="row">
+      <div class="col-4">
+        <img class="card-img-top" src="{{character.img}}" alt="Card image cap">
+      </div>
+      <div class="col-8">
+        <h1>{{character.name}}</h1>
+        <p><span class="font-weight-bold">Nickname : </span>{{character.nickname}}</p>
+        <p><span class="font-weight-bold">Birthday : </span>{{character.birthday}}</p>
+        <p><span class="font-weight-bold">Occupation : </span> {{character.occupation}}</p>
+        <p><span class="font-weight-bold">Apparence : </span>{{character.appearance}}</p>
+        <p><span class="font-weight-bold">Portrayed : </span>{{character.portrayed}}</p>
+        <p><span class="font-weight-bold">Category : </span>{{character.category}}</p>
+        <p><span class="font-weight-bold">Status : </span>{{character.status}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+

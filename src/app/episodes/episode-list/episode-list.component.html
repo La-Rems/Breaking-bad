@@ -1,0 +1,36 @@
+<div class="title">
+  <h1>List of Episodes</h1>
+</div>
+
+<div class="d-flex justify-content-center mb-4">
+  <button class="btn btn-light mr-5" (click)="allEpisodes()">All episodes</button>
+  <button class="btn btn-light mr-5" (click)="episodesBB()">Breaking Bad Episodes</button>
+  <button class="btn btn-light mr-5" (click)="episodesBCS()">Better Call Saul Episodes</button>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-hover table-bordered bg-white">
+        <thead class="thead-dark">
+        <tr>
+          <th>Serie</th>
+          <th>Season - Episode</th>
+          <th>Title</th>
+          <th>Characters</th>
+          <th>Air date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let episode of episodes">
+          <th>{{episode.series}}</th>
+          <td>Season {{episode.season}} - Episode {{episode.episode}}</td>
+          <td>{{episode.title}}</td>
+          <td >{{episode.characters}}</td>
+          <td>{{episode.air_date | date}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

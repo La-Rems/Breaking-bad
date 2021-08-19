@@ -1,0 +1,38 @@
+<div class="title">
+  <h1>List of characters</h1>
+</div>
+
+<div class="search">
+    <input class="form-control" type="search" [(ngModel)]="inputName" placeholder="Search">
+    <button class="btn btn-outline-light my-2 my-sm-0" type="submit" (click)="search()">Search</button>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 mb-5" *ngFor="let character of charactersViews">
+      <a href="#" class="text-decoration-none" [routerLink]="['/characters', character.char_id]">
+      <div class="card">
+        <img class="card-img-top" src="{{character.img}}" alt="Card image cap">
+          <h6><span class="badge" [class.badge-warning]="character.status == 'Presumed dead'" [class.badge-danger]="character.status == 'Deceased'" [class.badge-success]="character.status == 'Alive'" [class.badge-secondary]="character.status == 'Unknown'">{{character.status}}</span></h6>
+            <div [class.bg-bb]="character.category == 'Breaking Bad' "
+                 [class.bg-bcs]="character.category == 'Better Call Saul' "
+                 [class.bg-both]="character.category == 'Breaking Bad, Better Call Saul' "
+                 class="card-body">{{character.name}}
+            </div>
+      </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex justify-content-center text-center mb-5">
+  <div class="l-bb ml-3">
+    <p>Breaking bad</p>
+  </div>
+  <div class="l-bb-bcs ml-3">
+    <p>Breaking Bad and Better Call Saul</p>
+  </div>
+  <div class="l-bcs ml-3">
+    <p>Better Call Saul</p>
+  </div>
+</div>
